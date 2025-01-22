@@ -33,3 +33,49 @@ body::before{
 .learn{
     background-color: rgb(144, 214, 32);
 }
+
+body{
+    box-sizing: border-box;
+    color: #545454;
+}
+.div{
+    margin-top: 20px;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #dee0e3;
+    border-radius: 0px;
+   
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 300px;
+    border: 1px solid #dee0e3;
+}
+button{
+    border: none;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 77%;
+    right: 550px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .password-toggle-icon i {
+    font-size: 18px;
+    line-height: 1;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  .password-toggle-icon i:hover {
+    color: #000;
+  }

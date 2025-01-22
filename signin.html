@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Tutorials</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/signin.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <form action="">
+         <h2 class="mt-5 text-center " >Sign In</h2>
+       
+        <div class="container">
+            <div class="div row ">
+                <div class="col-6 col-lg-12">
+                    <div>
+                    <label for="username">Username</label><br>
+                    <input class="" type="text" id="username"><br>
+                    <span class="error-username"></span>
+                     <hr>
+            
+                </div>
+        
+                <div>
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" ><br>
+                    <span class="password-toggle-icon"><i class="fas fa-eye"></i></span> 
+                    
+                    <span class="error-password"></span>
+                     <hr>
+                </div>
+                <button id="submitter" class="submitter  p-1 mb-2 text-white bg-primary">Submit</button>
+                </div>
+                
+            </div>
+        </div>
+       
+
+    </form>
+
+
+
+<script>
+    const btn = document.getElementById("submitter")
+    const nameField = document.getElementById("username")
+    const passwordField = document.getElementById("password")
+    
+       btn.addEventListener("click", (e) => {
+        e.preventDefault()
+        if( nameField.value.trim() !== "" &&
+            passwordField.value.trim() !== ""
+         ){
+            window.location.href = "./index.html";
+        } else{
+            alert("Fields are Empty!")
+        }
+        
+      })  
+    
+   
+
+//    const inputField = document.getElementById("password");
+//    const togglePassword = document.querySelector(".password-toggle-icon i");
+
+//    togglePassword.addEventListener('click', function(e){
+//     e.preventDefault()
+//     if(inputField.type === "password"){
+//         inputField.type = "text";
+//         togglePassword.classList.remove("fa-eye");
+//         togglePassword.classList.add("fa-eye-slash");
+//     }else{
+//         inputField.type = "password"
+//         togglePassword.classList.add("fa-eye");
+//         togglePassword.classList.remove("fa-eye-slash")
+
+
+//     }
+//    });
+
+
+
+const inputField= document.getElementById("password");
+const togglePassword = document.querySelector ( ".password-toggle-icon i");
+
+togglePassword.addEventListener("click", function (e){
+    e.preventDefault()
+    if(inputField.type === "password"){
+        inputField.type = "text";
+        togglePassword.classList.remove("fa-eye");
+        togglePassword.classList.add("fa-eye-slash");
+    }else{
+        inputField.type = "password"
+        togglePassword.classList.add("fa-eye");
+        togglePassword.classList.remove("fa-eye-slash");
+    }
+});
+</script>
+</body>
+</html>

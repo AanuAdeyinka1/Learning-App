@@ -1,0 +1,78 @@
+body{
+    box-sizing: border-box;
+    color: #000;
+}
+h2{
+    color: #ffc108;
+    margin-top: 20px;
+}
+.div{
+    margin-top: 20px;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #dee0e3;
+    border-radius: 0px;
+   
+}
+.container{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 370px;
+    border: 1px solid #dee0e3;
+}
+button{
+    border: none;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 56%;
+    right: 550px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .password-toggle-icon i {
+    font-size: 18px;
+    line-height: 1;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  .password-toggle-icon i:hover {
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    .password-toggle-icon {
+        right: 215px; 
+        top: 350px;
+        
+    
+    }
+    input{
+            width: 200px;
+            border: none;
+        }
+    .password-toggle-icon i {
+        font-size: 16px; 
+    }
+}
+
+/* Media Query for Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+    .password-toggle-icon {
+        right: 210px; /* Adjust for narrow screens */
+        top: 50%; /* Slightly adjust top for better alignment */
+    }
+
+    .password-toggle-icon i {
+        font-size: 14px; /* Smaller icon for compact view */
+    }
+}

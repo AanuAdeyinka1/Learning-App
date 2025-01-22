@@ -351,26 +351,49 @@
             </div>
             <div class="mb-3">
                 <label for="last-name" class="col-form-label"> Last Name</label>
-                <input type="text" class="form-control" id="first-name">
+                <input type="text" class="form-control" id="last-name">
             </div>
             <div class="mb-3">
                 <label for="email" class="col-form-label"> Email</label>
-                <input type="text" class="form-control" id="first-name">
+                <input type="text" class="form-control" id="email">
             </div>
             <div class="mb-3">
-                <label for="phone" class="col-form-label"> Phone number</label>
-                <input type="text" class="form-control" id="first-name">
+                <label for="phone-number" class="col-form-label"> Phone number</label>
+                <input type="tel" class="form-control" id="phone-number">
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" id="bttn" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
   </div>
+<script>
+    
+    const btn = document.getElementById("bttn")
+    const nameField = document.getElementById("first-name")
+    const lastNameField = document.getElementById("last-name")
+    const emailField = document.getElementById ("email")
+    const phoneField = document.getElementById("phone-number")
+    
+       btn.addEventListener("click", () => {
+         
 
+        if( nameField.value.trim() !== "" &&
+        lastNameField.value.trim() !== "" &&
+            emailField.value.trim() !== "" &&
+            phoneField.value.trim() !== ""
+         ){
+            window.location.href = "/signup.html";
+        } else{
+            alert("Fields are Empty!")
+        }
+        
+      })      
+    
+</script>
 </body>
 </html>
 
